@@ -72,7 +72,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public List<AccountDto> getAllAccounts() {
 
-        List<Account> accounts=accountRepository.findAll();
+        List<Account> accounts = accountRepository.findAll();
         return accounts.stream().map((account)->AccountMapper.mapToAccountDto(account))
                 .collect(Collectors.toList());
     }
